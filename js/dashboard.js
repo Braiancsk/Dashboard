@@ -28,6 +28,7 @@ addOrder.addEventListener('click', ()=>{
 close.addEventListener('click', ()=>{
     modalUpdate.classList.remove('modal-active');
     document.body.style.overflowY = 'auto';
+    update.disabled = true;
     bg.style.display = 'none';
     for(var i = 0; i < checkboxes.length; i++){
         checkboxes[i].checked = false;
@@ -58,6 +59,7 @@ cancel.addEventListener('click', ()=>{
 bg.addEventListener('click', ()=>{
     modalUpdate.classList.remove('modal-active');
     modalOrder.classList.remove('modal-active');
+    update.disabled = true;
     document.body.style.overflowY = 'auto';
     bg.style.display = 'none';
     for(var i = 0; i < checkboxes.length; i++){
