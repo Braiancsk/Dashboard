@@ -7,18 +7,7 @@ let bg = document.querySelector('.bg');
 let close = document.getElementById('close');
 let close2 = document.getElementById('close2');
 let cancel = document.getElementById('cancel');
-    for(var i = 0; i < checkboxes.length; i++){
-        checkboxes[i].addEventListener('click',(e)=>{
-            if(e.currentTarget.checked){
-                update.disabled = false;
-                update.style.opacity = '1';
-            }else{
-                update.disabled = true;
-                update.style.opacity = '0.5';
-            }
-            console.log('working');
-        });
-    }
+    
 
 
 
@@ -76,3 +65,40 @@ bg.addEventListener('click', ()=>{
         update.style.opacity = '0.5';
     }
 });
+
+
+//limit the quantity of checkboxes
+
+
+
+
+for(var i = 0; i < checkboxes.length; i++){
+    checkboxes[i].addEventListener('click',(e)=>{
+        if(e.currentTarget.checked){
+            update.disabled = false;
+            update.style.opacity = '1';
+        }else{
+            update.disabled = true;
+            update.style.opacity = '0.5';
+        }
+        
+    });
+}
+
+
+function limitCheck(){
+        const checks = document.querySelectorAll('.check');
+        let limit = 1;
+        for(var j = 0; j < checks.length; j++)
+            
+            checks[j].onclick = selectiveCheck;
+            function selectiveCheck () {
+                let checked = document.querySelectorAll('.check:checked');
+                if(checked.length >= limit + 1){
+                  
+                    return false;
+                }           
+              }
+}
+
+limitCheck();
