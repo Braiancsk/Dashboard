@@ -335,7 +335,7 @@ section.modal-order .form__wrapper input[type=text]{
     max-width:240px;
     width: 100%;
     border: 1px solid #DADADA;
-    color:#DADADA;
+    color:#a3a3a3;
     padding:8px;
 }
 
@@ -349,4 +349,12 @@ section.modal-order .form__wrapper .form-select{
 
 section.modal-order .form__wrapper input[type=text]:focus{
     outline-color: #DADADA;
+}
+
+input[type=datetime-local]{
+    max-width:240px;
+    width: 100%;
+    border: 1px solid #DADADA;
+    color:#a3a3a3;
+    padding:8px;
 }
