@@ -1,0 +1,688 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>DIF Express</title>
+</head>
+<body>
+    <div class="container-fluid d-flex">
+        <aside class="d-flex flex-column justify-content-between">
+            <div class="el">
+                <div class="logo"><img src="assets/logo.svg"/></div>
+        
+                <h6>MAIN MENU</h6>
+        
+                <div class="wrapper d-flex align-items-center mt-5">
+                    <img src="assets/shipments.svg" alt="icone">
+                    <h6 class="wrapper__titulo active">Remessas</h6>
+                </div><!--wrappper-->
+        
+                <div class="wrapper d-flex align-items-center mt-5">
+                    <img src="assets/settings.svg" alt="icone">
+                    <h6 class="wrapper__titulo">Definições</h6>
+                </div><!--wrappper-->
+    
+            </div><!--el-->
+    
+            <div class="logout d-flex align-items-center">
+                <img src="assets/logout.svg" alt="icone">
+                <a class="text-decoration-none" href="#"><h5 class="wrapper__titulo">Log Out</h5></a>
+            </div><!--logout-->
+        </aside>
+        <section class="content">
+            <div class="container">
+                <h1>Remessas</h1>
+
+                <div class="process d-flex justify-content-around">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"  checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Todos(684)
+                        </label>
+                      </div><!--form check-->
+
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Em processamento(13)
+                        </label>
+                      </div><!--form check-->
+
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                        <label class="form-check-label" for="flexRadioDefault3">
+                            Enviado(59)
+                        </label>
+                      </div><!--form check-->
+
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                        <label class="form-check-label" for="flexRadioDefault4">
+                            Entregue(595)
+                        </label>
+                      </div><!--form check-->
+                </div><!--process-->
+
+                <section class="search mt-4 d-flex justify-content-between">
+                    <div class="search__wrapper">
+                        <input type="text" name="filter" placeholder="Search"/>
+                        <img src="assets/search.svg" alt="icone">
+                    </div><!--search-->
+
+                    <div class="buttons d-flex">
+                        <button disabled id="update">
+                            <img class="mx-2" src="assets/update.svg" alt="icone">
+                            Atualizar
+                        </button>
+                        <button id="addOrder">
+                            <img class="mx-2" src="assets/add.svg" alt="icone">
+                            Adicionar pedido
+                        </button>
+                    </div><!--buttons-->
+
+                </section><!--search-->
+
+                <section class="results d-flex align-items-center justify-content-between mt-5">
+                    <div class="results__wrapper d-flex justify-content-between align-items-center">
+                        <input class="check" type="checkbox" name="">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Data</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                          <img src="assets/calendar.svg" alt="icone">
+                    </div><!--results__wrapper-->
+
+                    <div class="results__wrapper d-flex justify-content-center align-items-center">
+                        <span>Tracker ID</span>
+                    </div><!--results__wrapper-->
+
+                    <div class="results__wrapper d-flex justify-content-center align-items-center">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Nome</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                    </div><!--results__wrapper-->
+
+                    <div class="results__wrapper d-flex justify-content-center align-items-center">
+                        <span>Cidade</span>
+                    </div><!--results__wrapper-->
+
+                    <div class="results__wrapper d-flex justify-content-center align-items-center">
+                        <span>Destino</span>
+                    </div><!--results__wrapper-->
+
+                    <div class="results__wrapper d-flex justify-content-center align-items-center">
+                        <span>Status</span>
+                    </div><!--results__wrapper-->
+
+                    <div class="results__wrapper d-flex justify-content-center align-items-center">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Mostrar Colunas</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                    </div><!--results__wrapper-->
+                </section><!--results-->
+
+<!--Information of product-->
+
+                <section class="product d-flex justify-content-between">
+                    <div class="results__wrapper d-flex justify-content-between align-items-center">
+                        <input class="check" type="checkbox" name="">
+                        <span>04/08/2021</span>
+                        <span>3:32</span>
+                    </div><!--results__wrapper-->
+
+                    <div class="results__wrapper d-flex justify-content-center align-items-center">
+                        <span>13454A35</span>
+                    </div><!--results__wrapper-->
+
+                    <div class="results__wrapper d-flex justify-content-center align-items-center">
+                        <span>Marvin McKinney</span>
+                    </div><!--results__wrapper-->
+
+                    <div class="results__wrapper d-flex justify-content-center align-items-center">
+                        <span>Kolkata, India</span>
+                    </div><!--results__wrapper-->
+
+                    <div class="results__wrapper d-flex justify-content-center align-items-center">
+                        <span>São Paulo, Brazil</span>
+                    </div><!--results__wrapper-->
+
+                    <div class="results__wrapper d-flex justify-content-center align-items-center">
+                        <span class="delivered">Delivered</span>
+                    </div><!--results__wrapper-->
+
+                    <div class="results__wrapper d-flex justify-content-end align-items-center">
+                        <img class="mx-2" src="assets/delete.svg" alt="icone">
+                        <img class="mx-2" src="assets/edit.svg" alt="icone">
+                    </div><!--results__wrapper-->
+                </section><!--product-->
+
+<!--Information of product-->
+
+<section class="product d-flex justify-content-between">
+    <div class="results__wrapper d-flex justify-content-between align-items-center">
+        <input class="check" type="checkbox" name="">
+        <span>04/08/2021</span>
+        <span>3:32</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>13454A36</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>Annette Black</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>Bangalore, India</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>São Paulo, Brazil</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span class="processing">Processing</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-end align-items-center">
+        <img class="mx-2" src="assets/delete.svg" alt="icone">
+        <img class="mx-2" src="assets/edit.svg" alt="icone">
+    </div><!--results__wrapper-->
+</section><!--product-->
+
+<!--Information of product-->
+
+    <section class="product d-flex justify-content-between">
+        <div class="results__wrapper d-flex justify-content-between align-items-center">
+            <input class="check" type="checkbox" name="">
+            <span>04/08/2021</span>
+            <span>4:30</span>
+        </div><!--results__wrapper-->
+
+        <div class="results__wrapper d-flex justify-content-center align-items-center">
+            <span>13454A37</span>
+        </div><!--results__wrapper-->
+
+        <div class="results__wrapper d-flex justify-content-center align-items-center">
+            <span>Esther Howard</span>
+        </div><!--results__wrapper-->
+
+        <div class="results__wrapper d-flex justify-content-center align-items-center">
+            <span>Delhi, India</span>
+        </div><!--results__wrapper-->
+
+        <div class="results__wrapper d-flex justify-content-center align-items-center">
+            <span>São Paulo, Brazil</span>
+        </div><!--results__wrapper-->
+
+        <div class="results__wrapper d-flex justify-content-center align-items-center">
+            <span class="shipped">Shipped</span>
+        </div><!--results__wrapper-->
+
+        <div class="results__wrapper d-flex justify-content-end align-items-center">
+            <img class="mx-2" src="assets/delete.svg" alt="icone">
+            <img class="mx-2" src="assets/edit.svg" alt="icone">
+        </div><!--results__wrapper-->
+    </section><!--product-->
+
+
+<!--Information of product-->
+
+<section class="product d-flex justify-content-between">
+    <div class="results__wrapper d-flex justify-content-between align-items-center">
+        <input class="check" type="checkbox" name="">
+        <span>04/08/2021</span>
+        <span>4:27</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>13454A38</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>Bessie Cooper</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>Mumbai, India</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>São Paulo, Brazil</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span class="delivered">Delivered</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-end align-items-center">
+        <img class="mx-2" src="assets/delete.svg" alt="icone">
+        <img class="mx-2" src="assets/edit.svg" alt="icone">
+    </div><!--results__wrapper-->
+</section><!--product-->
+
+<!--Information of product-->
+
+<section class="product d-flex justify-content-between">
+    <div class="results__wrapper d-flex justify-content-between align-items-center">
+        <input class="check" type="checkbox" name="">
+        <span>04/08/2021</span>
+        <span>4:29</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>13454A39</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>Guy Hawkins</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>Bangalore, India</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>São Paulo, Brazil</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span class="shipped">Shipped</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-end align-items-center">
+        <img class="mx-2" src="assets/delete.svg" alt="icone">
+        <img class="mx-2" src="assets/edit.svg" alt="icone">
+    </div><!--results__wrapper-->
+</section><!--product-->
+
+<!--Information of product-->
+
+<section class="product d-flex justify-content-between">
+    <div class="results__wrapper d-flex justify-content-between align-items-center">
+        <input class="check" type="checkbox" name="">
+        <span>04/08/2021</span>
+        <span>6:34</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>13454A40</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>Jane Cooper</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>São Paulo, Brazil</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>São Paulo, Brazil</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span class="delivered">Delivered</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-end align-items-center">
+        <img class="mx-2" src="assets/delete.svg" alt="icone">
+        <img class="mx-2" src="assets/edit.svg" alt="icone">
+    </div><!--results__wrapper-->
+</section><!--product-->
+
+<!--Information of product-->
+
+<section class="product d-flex justify-content-between">
+    <div class="results__wrapper d-flex justify-content-between align-items-center">
+        <input class="check" type="checkbox" name="">
+        <span>04/08/2021</span>
+        <span>6:38</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>13454A41</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>Theresa Webb</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>Delhi, India</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>São Paulo, Brazil</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span class="delivered">Delivered</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-end align-items-center">
+        <img class="mx-2" src="assets/delete.svg" alt="icone">
+        <img class="mx-2" src="assets/edit.svg" alt="icone">
+    </div><!--results__wrapper-->
+</section><!--product-->
+
+<!--Information of product-->
+
+<section class="product d-flex justify-content-between">
+    <div class="results__wrapper d-flex justify-content-between align-items-center">
+        <input class="check" type="checkbox" name="">
+        <span>04/08/2021</span>
+        <span>8:45</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>13454A42</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>Albert Flores</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>Mumbai, India</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>São Paulo, Brazil</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span class="delivered">Delivered</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-end align-items-center">
+        <img class="mx-2" src="assets/delete.svg" alt="icone">
+        <img class="mx-2" src="assets/edit.svg" alt="icone">
+    </div><!--results__wrapper-->
+</section><!--product-->
+
+<!--Information of product-->
+
+<section class="product d-flex justify-content-between">
+    <div class="results__wrapper d-flex justify-content-between align-items-center">
+        <input class="check" type="checkbox" name="">
+        <span>04/08/2021</span>
+        <span>8:46</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>13454A43</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>Robert Fox</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>Bangalore, India</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span>São Paulo, Brazil</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-center align-items-center">
+        <span class="delivered">Delivered</span>
+    </div><!--results__wrapper-->
+
+    <div class="results__wrapper d-flex justify-content-end align-items-center">
+        <img class="mx-2" src="assets/delete.svg" alt="icone">
+        <img class="mx-2" src="assets/edit.svg" alt="icone">
+    </div><!--results__wrapper-->
+</section><!--product-->
+
+<footer class="d-flex justify-content-between align-items-center mt-5">
+    <p>Showing 100 from 1135 Results</p>
+
+    <div class="pagination d-flex justify-content-around">
+        <a class="text-decoration-none" href="#"><button>Anterior</button></a>
+
+        <div class="pagination__pages">
+            <a class="text-decoration-none" href="#"><button class="pagination-active">1</button></a>
+            <a class="text-decoration-none" href="#"><button>2</button></a>
+            <a class="text-decoration-none" href="#"><button>3</button></a>
+            <a class="text-decoration-none" href="#"><button>4</button></a>
+        </div><!--pagination__pages-->
+
+
+        <a class="text-decoration-none" href="#"><button>Próximo</button></a>
+    </div><!--pagination-->
+</footer>
+        </div><!--container-->
+        </section><!--content-->
+    </div><!--container-->
+
+
+    <!--modal de atualizar pedido-->
+    <div class="bg"></div><!--bg-->
+    <section class="modal-update">
+        
+            <div class="container">
+                <nav class="d-flex justify-content-between align-items-center">
+                    <h2>Atualizar pedido</h2>
+                    <img id="close" src="assets/close.svg" alt="icone">
+                </nav>
+    
+                <form class="d-flex align-items-center justify-content-center flex-wrap">
+                    <div class="form__wrapper d-flex align-items-center justify-content-center flex-wrap">
+                        <div class="form-check d-flex flex-column justify-content-center align-items-center">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Informações de envio recebidas 
+                            </label>
+                          </div><!--form-check-->
+    
+                          <div class="form-check d-flex flex-column justify-content-center align-items-center">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Chegou no centro de distribuição no país de origem 
+                            </label>
+                          </div><!--form-check-->
+    
+                          <div class="form-check d-flex flex-column justify-content-center align-items-center">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Saiu das instalações da cidade de origem
+                            </label>
+                          </div><!--form-check-->
+    
+                          <div class="form-check d-flex flex-column justify-content-center align-items-center">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Chegou no centro internacional do país de origem 
+                            </label>
+                          </div><!--form-check-->
+    
+                          <div class="form-check d-flex flex-column justify-content-center align-items-center">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Pacote de fiscalização no páis de origem. Saiu do país de origem 
+                            </label>
+                          </div><!--form-check-->
+    
+                          <div class="form-check d-flex flex-column justify-content-center align-items-center">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Em trânsito ao país de destino 
+                            </label>
+                          </div><!--form-check-->
+    
+                          <div class="form-check d-flex flex-column justify-content-center align-items-center">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Chegou ao país de destino 
+                            </label>
+                          </div><!--form-check-->
+    
+                          <div class="form-check d-flex flex-column justify-content-center align-items-center">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Objeto recebido pelos correios do Brasil  
+                            </label>
+                          </div><!--form-check-->
+    
+                          <div class="form-check d-flex flex-column justify-content-center align-items-center">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Chegou no centro de distribuição no país de origem 
+                            </label>
+                          </div><!--form-check-->
+    
+                          <div class="form-check d-flex flex-column justify-content-center align-items-center">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Fiscalização em andamento 
+                            </label>
+                          </div><!--form-check-->
+    
+                          <div class="form-check d-flex flex-column justify-content-center align-items-center">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Fiscalização finalizada
+                            </label>
+                          </div><!--form-check-->
+    
+                          <div class="form-check d-flex flex-column justify-content-center align-items-center">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Objeto em trânsito aguarde  
+                            </label>
+                          </div><!--form-check-->
+    
+                          <div class="form-check d-flex flex-column justify-content-center align-items-center">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Objeto saiu para entrega  
+                            </label>
+                          </div><!--form-check-->
+    
+                          <div class="form-check d-flex flex-column justify-content-center align-items-center">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Objeto entregue ao destinatário 
+                            </label>
+                          </div><!--form-check-->
+
+                    </div><!--form__wrapper-->
+
+                  <div class="form__buttons d-flex justify-content-between align-items-center">
+                    <button>Cancelar</button>
+                    <input type="submit" name="atualizar" value="Atualizar">
+                  </div><!--form__buttons-->    
+                </form>
+            </div><!--container-->
+        </section><!--modal-update-->
+ 
+
+
+        <!--modal de atualizar pedido-->
+    <div class="bg"></div><!--bg-->
+    <section class="modal-order">
+        
+            <div class="container">
+                <nav class="d-flex justify-content-between align-items-center">
+                    <h2>Adicionar pedido</h2>
+                    <img id="close2" src="assets/close.svg" alt="icone">
+                </nav>
+    
+                <form class="d-flex align-items-center flex-wrap">
+                    
+                    <div class="form__wrapper d-flex  justify-content-center flex-wrap">
+                    
+                    <div class="form__wrapper">
+                        
+    
+                        <div class="form__input">
+                            <label for="form-select">País de origem:</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>India</option>
+                              </select>
+                        </div><!--input-->
+    
+                        <div class="form__input">
+                            <label for="form-select">País de destino:</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Brazil</option>
+                              </select>
+                        </div><!--input-->
+
+                        <div class="form__input d-flex flex-column">
+                            <label for="destino">Cidade de origem:</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Bangalore</option>
+                              </select>
+                        </div><!--input-->
+    
+                        <div class="form__input d-flex flex-column">
+                            <label for="destino">Cidade de destino:</label>
+                            <input type="text" name="rastreio" placeholder="Escolha uma cidade:" required/>
+                        </div><!--input-->
+
+                    </div><!--form-wrapper-->
+                    
+                    <div class="form__wrapper">
+                        <div class="form__input  d-flex flex-column">
+                            <label for="form-select">Rastreio:</label>
+                            <input type="text" name="rastreio" placeholder="TrackID" required/>
+                        </div><!--input-->
+    
+                        <div class="form__input d-flex flex-column">
+                            <label for="form-select">Nome do cliente:</label>
+                            <input type="text" name="rastreio" placeholder="Nome:" required/>
+                        </div><!--input-->
+    
+                        <div class="form__input  d-flex flex-column">
+                            <label for="form-select">Email do cliente:</label>
+                            <input type="text" name="rastreio" placeholder="Email:" required/>
+                        </div><!--input-->
+                        
+                        <div class="form__input d-flex flex-column">
+                            <label for="destino">Data de criação do rastreio para exibir:</label>
+                            <input type="datetime-local" >
+                        </div><!--input-->
+
+                    </div><!--form-wrapper-->
+                    </div><!--form__wrapper-->
+
+                  <div class="form__buttons d-flex justify-content-between align-items-center">
+                    <button id="cancel">Cancelar</button>
+                    <input type="submit" name="atualizar" value="Atualizar">
+                  </div><!--form__buttons-->    
+                </form>
+            </div><!--container-->
+        </section><!--modal-update-->
+
+<script src="js/dashboard.js"></script>
+
+<script>
+    function maskData(){
+    document.getElementById('data').addEventListener('input', function (e) {
+        var x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,2})(\d{0,4})/);
+        e.target.value = !x[2] ? x[1] : '' + x[1] + '/' + x[2] + (x[3] ? '/' + x[3] : '');
+    });
+}
+
+
+</script>
+</body>
+</html>
